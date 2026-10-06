@@ -1,0 +1,8 @@
+prefix=/home/leduyanh/Documents/6_lab_workspace/3_pioneer3dx_nav/devel
+
+Name: pdx_nav
+Description: Description of pdx_nav
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

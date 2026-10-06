@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+  <world name="default">
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <physics type="ode">
+      <real_time_update_rate>1000.0</real_time_update_rate>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+    </physics>
+
+    <!-- Tường ngoài: cạnh sau (xa) -->
+    <model name="wall_back">
+      <static>true</static>
+      <pose>1 4 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>10 0.1 1</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>10 0.1 1</size></box></geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Tường ngoài: cạnh trước (gần) -->
+    <model name="wall_front">
+      <static>true</static>
+      <pose>1 -4 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>10 0.1 1</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>10 0.1 1</size></box></geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- 4 vách ngăn bên trong, dài tăng dần, gắn từ tường sau thò ra -->
+    <model name="partition_1">
+      <static>true</static>
+      <pose>-4 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.1 8 1</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>0.1 8 1</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <model name="partition_2">
+      <static>true</static>
+      <pose>-1 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.1 5 1</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>0.1 5 1</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <model name="partition_3">
+      <static>true</static>
+      <pose>1 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.1 5 1</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>0.1 5 1</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <model name="partition_5">
+      <static>true</static>
+      <pose>3.5 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.1 5 1</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>0.1 5 1</size></box></geometry></visual>
+      </link>
+    </model>   
+
+    <model name="partition_4">
+      <static>true</static>
+      <pose>6 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.1 8 1</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>0.1 8 1</size></box></geometry></visual>
+      </link>
+    </model>
+
+ 
+
+    <scene>
+      <shadows>false</shadows>
+    </scene>
+
+    <gui>
+      <camera name="user_camera">
+        <pose>0 0 10 0 1.5708 0</pose>
+      </camera>
+    </gui>
+  </world>
+</sdf>

@@ -1,0 +1,8 @@
+prefix=/home/leduyanh/Documents/6_lab_workspace/3_pioneer3dx_nav/install
+
+Name: pdx_slam
+Description: Description of pdx_slam
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

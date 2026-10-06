@@ -1,0 +1,2 @@
+p3dx/p3dx_control:p3dx/p3dx_description:p3dx/p3dx_gazebo:pdx_nav:pdx_slam
+-DCATKIN_DEVEL_PREFIX=/home/leduyanh/Documents/6_lab_workspace/3_pioneer3dx_nav/devel -DCMAKE_INSTALL_PREFIX=/home/leduyanh/Documents/6_lab_workspace/3_pioneer3dx_nav/install -G Unix Makefiles
